@@ -5,10 +5,10 @@ Faskmap (Faskes Map) adalah sebuah web aplikasi informasi geografis yang bertuju
 ## Untuk menjalankan
 
 1.  Nyalakan XAMPP Apache dan MySQL
-2.  Import database "faskes_mojokerto.sql"
-3.  Jalankan perintah 'composer install' pada terminal folder utama program Faskmap
-4.  Jalankan perintah 'php artisan serve'
-5.  Bukan link 'http://127.0.0.1:8000/' untuk mengakses aplikasi
+2.  Import database `faskes_mojokerto.sql`
+3.  Jalankan perintah `composer install` pada terminal folder utama program Faskmap
+4.  Jalankan perintah `php artisan serve`
+5.  Bukan link `http://127.0.0.1:8000/` untuk mengakses aplikasi
 
 ## Nama Kelompok
 Kelompok 12 Kelas TI 2018B
