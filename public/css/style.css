@@ -1,0 +1,346 @@
+* {
+    font-family: "Inter", "Font Awesome 5 Free", sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+nav,
+.top-page,
+.app .bg-costum {
+    background: #08090d;
+}
+
+.app .bg-green {
+    background: #00b67a;
+}
+
+.app .text-green {
+    color: #00b67a;
+}
+
+.app .list-group-item {
+    border-bottom: 1px solid #fff;
+}
+
+.app .back i {
+    font-size: 1.5rem;
+}
+
+.app .back span {
+    font-size: 1.1rem;
+}
+
+.app .tab-data {
+    height: 53vh;
+}
+
+.app .list-group {
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.top-page .content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.top-page .content .headline {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 59px;
+    color: #ffffff;
+}
+
+.top-page .content .subheadline {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.top-page .content .button-header {
+    margin-top: 30px;
+}
+
+.top-page .content .button-header .btn-started {
+    background: #0ddb93;
+    border-radius: 8px;
+    width: 150px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #001d01;
+    font-weight: 600;
+}
+
+.top-page .content .button-header .btn-started:hover {
+    background: #0b9c69;
+    color: #fff;
+}
+
+.top-page .content .button-header .btn-watch {
+    background: transparent;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #939ea3;
+}
+
+nav .navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #ffffff;
+    margin-right: 30px !important;
+}
+
+nav .navigation li {
+    margin-right: 24px;
+}
+
+nav .navigation a {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff !important;
+}
+
+nav .app li {
+    margin-right: 22px;
+}
+
+nav .app a {
+    font-size: 16px;
+}
+
+nav .app .to-app {
+    background: #ffffff;
+    border-radius: 8px;
+    width: 113px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 14px 14px 14px 14px !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #001d01 !important;
+    font-weight: 600;
+}
+
+nav .app .to-app:hover {
+    background-color: #0ddb93;
+    color: #001d01;
+}
+
+.top-page .img-container {
+    position: relative;
+    border: 2px solid #fff;
+    margin: 5rem;
+    transform: translateY(-40px);
+}
+
+.top-page .img-container img {
+    position: relative;
+    transform: translate(-30px, 30px);
+}
+
+.top-page .img-second-page img {
+    width: 200px;
+    margin: 0;
+}
+
+body ::-webkit-input-placeholder {
+    color: #989db1 !important;
+}
+
+body :-ms-input-placeholder {
+    color: #989db1 !important;
+}
+
+body ::-ms-input-placeholder {
+    color: #989db1 !important;
+}
+
+body ::placeholder {
+    color: #989db1 !important;
+}
+
+.font-red-hat-display {
+    font-family: "Red Hat Display", sans-serif !important;
+}
+
+.cl-light-blue {
+    color: #34b3ff;
+}
+
+.adventages {
+    position: relative;
+    z-index: 10 !important;
+    background: #08090d;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.adventages .headline {
+    font-family: "Red Hat Display", sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 60px;
+    line-height: 140%;
+    color: #ffffff;
+}
+
+.adventages .card {
+    background: transparent;
+    width: 286px;
+    border: none;
+    margin-top: 125px;
+}
+
+.adventages .card-desc {
+    margin-top: 32px;
+}
+
+.adventages .card .img-container {
+    position: relative;
+    border: 2px solid #fff;
+}
+
+.adventages .card-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.adventages .card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #ced2de;
+}
+
+.ornament .ornament-left {
+    z-index: 0 !important;
+    position: absolute;
+    margin-top: -52px;
+}
+
+.cl-light-blue {
+    color: #34b3ff;
+}
+
+.contact-us {
+    background: #08090d;
+    padding-top: 125px;
+    padding-bottom: 90px;
+}
+
+.contact-us .headline {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 140%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-us .button {
+    margin-top: 72px;
+}
+
+.contact-us .btn-contact {
+    padding: 16px 32px;
+    background: #00b67a;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.contact-us .btn-demo {
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ced2de;
+    border: 1px solid #8d8f98;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #101419;
+}
+
+footer p {
+    font-size: 20px;
+    color: #adb2b8;
+}
+
+footer li {
+    margin-bottom: 12px;
+}
+
+footer li a {
+    color: #adb2b8;
+    font-size: 20px;
+    font-weight: 400 !important;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        padding-top: 30px;
+    }
+    nav .navigation {
+        padding-left: 30px;
+    }
+
+    footer .container-fluid {
+        padding-left: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .adventages .headline {
+        font-size: 44px;
+        line-height: 60px !important;
+    }
+
+    .adventages .card {
+        margin-top: 80px;
+    }
+
+    .contact-us .btn-demo {
+        width: 100%;
+    }
+
+    .contact-us .btn-contact {
+        width: 100%;
+    }
+
+    .contact-us .headline {
+        font-size: 40px;
+        line-height: 60px !important;
+    }
+}
