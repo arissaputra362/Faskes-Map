@@ -3,7 +3,7 @@
 Faskmap (Faskes Map) adalah sebuah web aplikasi informasi geografis yang bertujuan untuk memudahkan pengguna dalam mencari Fasilitas Kesehatan di sekitar lokasinya di dalam Kota Mojokerto. Dengan menampilkan hampir semua data fasilitas kesehatan yang ada di Kota Mojokerto dan menampilkan daftar fasilitas kesehatan dengan radius 1km dari lokasi pengguna, serta juga menunjukkan rute untuk menuju salah satu faskes yg dituju.
 
 ### Flowmap
-![Flopwmap drawio](https://user-images.githubusercontent.com/66118920/146777060-c4531d69-9694-4839-8613-e45aa7e4c7a4.png)
+![Flopwmap drawio](https://user-images.githubusercontent.com/66118920/146777464-f082c5bd-98fb-4994-81c6-53a02594bef2.png)
 
 ## Untuk menjalankan
 
