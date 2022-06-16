@@ -1,0 +1,29 @@
+@media screen and (max-width: 767px) {
+    .app-bar{
+        position: fixed;
+        bottom: 0;
+        height: 150px;
+        z-index: 1000;
+    }
+
+    .arrow-up i{
+        font-size: 40px;
+    }
+
+    .back{
+        transition: all 0.2s;
+    }
+
+    .hide-beranda{
+        display: none !important;
+    }
+
+    .card{
+        border-radius: 12px 12px 0 0;
+    }
+
+    .card-body{
+        height: 140px;
+        overflow-y: scroll;
+    }
+}

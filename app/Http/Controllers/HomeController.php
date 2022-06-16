@@ -7,6 +7,7 @@ use App\Models\Hospital;
 use App\Models\PublicHealth;
 use App\Models\Road;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -18,13 +19,17 @@ class HomeController extends Controller
     public function app()
     {
         // Data Faskes
-        $hospitals = Hospital::selectRaw('*, st_asgeojson(point) as gjson')->from('faskes')->get();
+        $hospitals = Hospital::selectRaw('*, st_asgeojson(point) as gjson')->get();
 
         // Data Wilayah Kota Mojokerto
-        $areas = Area::selectRaw('*, st_asgeojson(polygon) as gjson')->from('wilayah_polygon')->get();
+        $areas = Area::selectRaw('*, st_asgeojson(polygon) as gjson')->get();
+
+        // Data Jalan Sidoarjo
+        $roads = Road::selectRaw('*, st_asgeojson(line) as gjson')->get();
 
         $hospitalData =  [];
         $areaData = [];
+        $roadData = [];
 
         // Create gjson data rumah sakit
         foreach ($hospitals as $hospital) {
@@ -38,7 +43,7 @@ class HomeController extends Controller
             ];
         }
 
-        // Create gjson data wilayah
+        // Create gjson data jalan
         foreach ($areas as $area) {
             $areaData[] = [
                 'geometry'      => json_decode($area->gjson),
@@ -57,9 +62,28 @@ class HomeController extends Controller
             ];
         }
 
+        // Create gjson data jalan
+        foreach ($roads as $road) {
+            $roadData[] = [
+                'geometry'      => json_decode($road->gjson),
+                'type'          => 'Feature',
+                'properties'    => [
+                    'style'        => [
+                        json_decode('weight')        => 2,
+                        // json_decode('color')         => '#999',
+                        // json_decode('opacity')       => 1,
+                        json_decode('fillColor')     => '#000',
+                        json_decode('fillOpacity')   => 0.1
+                    ]
+                ],
+                'id'            => $road->id
+            ];
+        }
+
         return view('app', [
             'hospitalData'      => $hospitalData,
             'areaData'          => $areaData,
+            'roadData'          => $roadData,
             'hospitalList'      => $hospitals
         ]);
     }
@@ -71,7 +95,7 @@ class HomeController extends Controller
         if ($myLocation) {
             $location = 'Kelurahan ' . $myLocation->kelurahan . ',' .  ' Kecamatan ' . $myLocation->kecamatan;
         } else {
-            $location = 'Maaf, Lokasi Anda di luar Kota Mojokerto';
+            $location = '-';
         }
         return response()->json(['location' => $location]);
     }
@@ -93,6 +117,10 @@ class HomeController extends Controller
                 "jarak"     => $data->jarak
             ];
         }
+
+        usort($dataFaskes, function ($a, $b) {
+            return $a['jarak'] - $b['jarak'];
+        });
 
         return response()->json(['d' => $dataFaskes]);
     }

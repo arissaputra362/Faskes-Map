@@ -4,13 +4,18 @@
     <div class="app">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-8 px-0">
+                <div class="col-md-7 col-lg-8 px-0">
                     <div id='map'></div>
                 </div>
-                <div class="col-lg-4 px-0">
-                    <div class="card h-100 bg-costum text-light rounded-0">
+                <div class="col-md-5 col-lg-4 px-0 app-bar">
+                    <div class="card h-100 bg-costum text-light rounded-md-0">
+                        <div class="arrow-up d-block d-md-none text-center py-1">
+                            <i class="fas fa-angle-up" id="slide-up"></i>
+                            <i class="fas fa-angle-down" id="slide-down"></i>
+                        </div>
                         <div class="card-body">
-                            <a href="/" class="back mb-3 text-decoration-none text-green d-flex align-items-center">
+                            <a href="/"
+                                class="back mb-3 text-decoration-none text-green d-flex align-items-center d-md-inline-block">
                                 <i class="fas fa-chevron-circle-left mr-2"></i>
                                 <span>Beranda</span>
                             </a>

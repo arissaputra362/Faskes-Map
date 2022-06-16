@@ -35,6 +35,7 @@
 
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         html,
         body {
@@ -46,7 +47,6 @@
             width: 100%;
             height: 100vh;
         }
-
     </style>
 
 
@@ -74,7 +74,7 @@
         const locationInput = document.querySelector("#location");
 
         // Default Current Location
-        var curLocation = [-7.4714, 112.4413];
+        var curLocation = [-7.536792685362514, 112.69293264345234];
 
         // New Location, change every event
         var newCurr;
@@ -87,19 +87,26 @@
             "type": "FeatureCollection",
             "features": [
                 @foreach ($hospitalData as $hospital)
-                    <?php echo json_encode($hospital); ?>
-                    ,
+                    <?php echo json_encode($hospital); ?>,
                 @endforeach
             ]
         };
+
+        var roadway = {
+            "type": "FeatureCollection",
+            "features": [
+                @foreach ($roadData as $road)
+                    <?php echo json_encode($road); ?>,
+                @endforeach
+            ]
+        }
 
         // Get Data Area Mojokerto from php controller
         var areas = {
             "type": "FeatureCollection",
             "features": [
                 @foreach ($areaData as $area)
-                    <?php echo json_encode($area); ?>
-                    ,
+                    <?php echo json_encode($area); ?>,
                 @endforeach
             ]
         };
@@ -110,6 +117,7 @@
                 curLocation[0] = newCurr.lat;
                 curLocation[1] = newCurr.lng;
             }
+            obj.sort((a, b) => parseFloat(a.distance) - parseFloat(b.distance));
             var lat = curLocation[0];
             var lng = curLocation[1];
             var myJson = JSON.stringify(obj);
@@ -125,7 +133,6 @@
                 },
                 success: function(data) {
                     // continue program
-                    console.log(data.d);
                     if (data) {
                         $('#faskes').empty();
                         $.each(data.d, function(key, d) {
@@ -167,8 +174,10 @@
 
         // Hidden input change event
         $(latitude).change('change', function() {
+            obj.sort((a, b) => parseFloat(a.distance) - parseFloat(b.distance));
             var lat = latitude.value;
             var lng = longitude.value;
+            console.log(obj);
             var myJson = JSON.stringify(obj);
 
             // Get Closest From Position Faskes Data List
@@ -182,7 +191,6 @@
                 },
                 success: function(data) {
                     // continue program
-                    console.log(data.d);
                     if (data) {
                         $('#faskes').empty();
                         $.each(data.d, function(key, d) {
